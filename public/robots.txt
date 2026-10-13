@@ -1,0 +1,6 @@
+# Robots.txt for PhotoKB (https://photokb.com)
+User-agent: *
+Allow: /
+
+# Target Sitemaps
+Sitemap: https://photokb.com/sitemap.xml
