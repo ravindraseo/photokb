@@ -3,20 +3,133 @@ import { useParams, Link } from 'react-router-dom';
 import ToolLayout from '../../components/ToolLayout';
 import { ALL_TOOLS } from '../../data/toolsData';
 import { Copy, Check, RefreshCw, KeyRound, Code, QrCode, Type, Binary } from 'lucide-react';
+import NotFoundPage from '../NotFoundPage';
+
+const TOOL_METADATA_EXTRAS = {
+  'qr-generator': {
+    howToSteps: [
+      { title: 'Enter Text or URL', desc: 'Type or paste the web link, contact info, or message you want to encode.' },
+      { title: 'Instant QR Generation', desc: 'The QR code renders immediately with high-contrast error correction.' },
+      { title: 'Scan with Smartphone', desc: 'Aim your iPhone or Android camera to verify instant scan detection.' },
+      { title: 'Save QR Image', desc: 'Save or snapshot the QR code image for print flyers, business cards, or packaging.' }
+    ],
+    features: [
+      { title: 'High-Res Matrix', desc: 'Sharp edges optimized for physical printing on business cards and posters.' },
+      { title: 'All Format Support', desc: 'Encodes URLs, plain text, phone numbers, and Wi-Fi credentials.' },
+      { title: '100% In-Browser Privacy', desc: 'Generated on the fly without logging your destination URLs.' }
+    ],
+    faqs: [
+      { question: 'Do these QR codes expire?', answer: 'No! These are static QR codes that encode your destination directly into the pattern. They will work forever.' },
+      { question: 'Can I print these QR codes for commercial use?', answer: 'Yes, they are 100% free with no commercial restrictions or royalties.' }
+    ]
+  },
+  'json-formatter': {
+    howToSteps: [
+      { title: 'Paste Raw JSON', desc: 'Paste your unformatted, minified, or messy JSON into the input box.' },
+      { title: 'Click Beautify or Minify', desc: 'Choose 2-space indentation for human readability or minify for production.' },
+      { title: 'Inspect Errors', desc: 'Invalid syntax flags line and column errors instantly.' },
+      { title: 'Copy Formatted JSON', desc: 'Copy the clean, syntax-highlighted code to your clipboard with one click.' }
+    ],
+    features: [
+      { title: 'Instant Syntax Validation', desc: 'Catches missing commas, trailing brackets, and invalid quotes instantly.' },
+      { title: 'Zero Latency', desc: 'Formats megabytes of data in milliseconds directly in your browser.' },
+      { title: 'Confidential & Safe', desc: 'Your private database payloads and API keys never leave your machine.' }
+    ],
+    faqs: [
+      { question: 'Does PhotoKB send my JSON to any external API?', answer: 'No, validation and formatting run completely offline inside your browser sandbox.' },
+      { question: 'Can I minify JSON for web production?', answer: 'Yes, click the Minify button to remove all whitespace and line breaks for faster load times.' }
+    ]
+  },
+  'password-generator': {
+    howToSteps: [
+      { title: 'Select Password Length', desc: 'Slide the length selector (we recommend 16+ characters).' },
+      { title: 'Toggle Numbers & Symbols', desc: 'Choose whether to include special characters and numbers.' },
+      { title: 'Generate Strong Password', desc: 'Click generate to sample cryptographically randomized entropy.' },
+      { title: 'Copy to Clipboard', desc: 'Copy and paste into your password manager or account setup.' }
+    ],
+    features: [
+      { title: 'Cryptographic Randomness', desc: 'Uses browser crypto API for high entropy against brute-force attacks.' },
+      { title: 'Custom Complexity', desc: 'Customize uppercase, lowercase, numbers, and symbols.' },
+      { title: 'Zero Log Policy', desc: 'Passwords are generated in ephemeral memory and discarded immediately.' }
+    ],
+    faqs: [
+      { question: 'How long should a strong password be?', answer: 'Security experts recommend a minimum of 16 characters with a mixture of letters, numbers, and symbols.' },
+      { question: 'Are generated passwords stored or sent anywhere?', answer: 'Never. Processing happens locally in your device memory.' }
+    ]
+  },
+  'case-converter': {
+    howToSteps: [
+      { title: 'Type or Paste Text', desc: 'Enter any paragraph, list, or title into the text area.' },
+      { title: 'Choose Target Case', desc: 'Click UPPERCASE, lowercase, Title Case, or kebab-case.' },
+      { title: 'Copy Converted Text', desc: 'Click the copy button to transfer your cleaned text instantly.' }
+    ],
+    features: [
+      { title: '1-Click Transformation', desc: 'Convert entire documents or titles in a fraction of a second.' },
+      { title: 'Developer-Friendly Formats', desc: 'Includes camelCase, kebab-case, and Title Case.' },
+      { title: 'No Word Limits', desc: 'Process unlimited characters with zero lag.' }
+    ],
+    faqs: [
+      { question: 'What is Title Case?', answer: 'Title Case capitalizes the first letter of every major word, ideal for headlines and book titles.' },
+      { question: 'Is there a character limit on the text converter?', answer: 'No, you can paste and convert tens of thousands of words without limitation.' }
+    ]
+  },
+  'base64-converter': {
+    howToSteps: [
+      { title: 'Select Encode or Decode', desc: 'Switch between encoding plain text to Base64 or decoding Base64 back to UTF-8.' },
+      { title: 'Enter Text', desc: 'Type or paste your input into the editor.' },
+      { title: 'Instant Output', desc: 'View the live Base64 output formatted in real time.' }
+    ],
+    features: [
+      { title: 'Standard RFC 4648 Base64', desc: 'Compliant with web and email transport standards.' },
+      { title: 'Error-Protected Decoding', desc: 'Catches invalid characters and malformed padding gracefully.' },
+      { title: 'Completely In-Browser', desc: 'No network requests required.' }
+    ],
+    faqs: [
+      { question: 'What is Base64 encoding used for?', answer: 'Base64 represents binary data in an ASCII string format, commonly used for data URIs, email attachments, and web APIs.' }
+    ]
+  },
+  'lorem-generator': {
+    howToSteps: [
+      { title: 'Review Dummy Text', desc: 'Read the standard classical Latin placeholder paragraphs.' },
+      { title: 'Copy to Clipboard', desc: 'Click Copy Dummy Text to paste into your wireframes, designs, or mockups.' }
+    ],
+    features: [
+      { title: 'Classical Cicero Excerpt', desc: 'Natural distribution of letters to mimic real typography.' },
+      { title: 'Instant 1-Click Copy', desc: 'Zero hassle workflow for web designers and developers.' }
+    ],
+    faqs: [
+      { question: 'Why do designers use Lorem Ipsum?', answer: 'Lorem Ipsum mimics the look and feel of real text without distracting the viewer with readable content during layout design.' }
+    ]
+  }
+};
 
 export default function GenericToolPage() {
   const { toolId } = useParams();
-  const tool = ALL_TOOLS.find((t) => t.id === toolId) || {
-    id: toolId,
-    name: 'Online Utility Tool',
-    description: 'Free client-side online tool powered by PhotoKB.',
-    category: 'other-tools'
+  const tool = ALL_TOOLS.find((t) => t.id === toolId);
+
+  if (!tool) {
+    return <NotFoundPage />;
+  }
+
+  const extraMeta = TOOL_METADATA_EXTRAS[toolId] || {
+    howToSteps: [
+      { title: 'Enter Inputs', desc: 'Fill in the options or upload files needed for this utility.' },
+      { title: 'Process In-Browser', desc: 'Click execute to generate instant results in local memory.' },
+      { title: 'Export or Copy', desc: 'Download or copy the output directly to your device.' }
+    ],
+    features: [
+      { title: '100% Client-Side', desc: 'No data leaves your device.' },
+      { title: 'Free & Unlimited', desc: 'Zero signups, zero quotas.' }
+    ],
+    faqs: [
+      { question: 'Is this tool free?', answer: 'Yes, 100% free with no hidden charges or subscriptions.' }
+    ]
   };
 
   const [copied, setCopied] = useState(false);
 
   // QR Code State
-  const [qrText, setQrText] = useState('https://photokb.com');
+  const [qrText, setQrText] = useState('https://www.photokb.net');
 
   // JSON Formatter State
   const [jsonInput, setJsonInput] = useState('{"name":"PhotoKB","tools":50,"country":"USA","free":true}');
@@ -73,6 +186,9 @@ export default function GenericToolPage() {
       category={tool.category.replace('-', ' ').toUpperCase()}
       categorySlug={tool.category}
       currentToolId={tool.id}
+      howToSteps={extraMeta.howToSteps}
+      features={extraMeta.features}
+      faqs={extraMeta.faqs}
     >
       {/* Dynamic Tool Interface based on toolId */}
       {toolId === 'qr-generator' && (

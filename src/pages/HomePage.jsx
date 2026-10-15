@@ -444,9 +444,12 @@ export default function HomePage({ onOpenSearch }) {
         <div className="max-w-4xl mx-auto px-3 sm:px-6 lg:px-8">
           
           {/* Main Title */}
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight text-center mb-3 sm:mb-4">
-            Image Resizer Tool
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 tracking-tight text-center mb-1.5 sm:mb-2">
+            Free Online Image Resizer &amp; PDF Tools
           </h1>
+          <p className="text-center text-xs sm:text-sm text-slate-600 max-w-xl mx-auto mb-3.5 sm:mb-4">
+            Fast, 100% private in-browser image compression, US passport 2x2 photo resizing, and file conversion with zero server wait times.
+          </p>
 
           {/* Hidden File Input */}
           <input

@@ -19,6 +19,7 @@ const AboutPage = lazy(() => import('./pages/AboutPage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const PrivacyPage = lazy(() => import('./pages/PrivacyPage'));
 const TermsPage = lazy(() => import('./pages/TermsPage'));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 // Lazy-loaded Tool Pages
 const ImageResizer = lazy(() => import('./pages/tools/ImageResizer'));
@@ -122,8 +123,8 @@ export default function App() {
             {/* Direct Catch-all for remaining individual tools */}
             <Route path="/:toolId" element={<GenericToolPage />} />
 
-            {/* Fallback */}
-            <Route path="*" element={<Navigate to="/" replace />} />
+            {/* Dedicated 404 Fallback */}
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
           </Suspense>
         </main>

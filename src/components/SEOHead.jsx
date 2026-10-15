@@ -1,11 +1,35 @@
 import { useEffect } from 'react';
 
+function setMetaTag(attr, attrVal, content) {
+  if (!content) return;
+  let el = document.querySelector(`meta[${attr}="${attrVal}"]`);
+  if (!el) {
+    el = document.createElement('meta');
+    el.setAttribute(attr, attrVal);
+    document.head.appendChild(el);
+  }
+  el.setAttribute('content', content);
+}
+
+function setLinkTag(rel, href, extraAttrs = {}) {
+  if (!href) return;
+  let selector = `link[rel="${rel}"]`;
+  if (extraAttrs.hreflang) selector += `[hreflang="${extraAttrs.hreflang}"]`;
+  let el = document.querySelector(selector);
+  if (!el) {
+    el = document.createElement('link');
+    el.setAttribute('rel', rel);
+    Object.entries(extraAttrs).forEach(([k, v]) => el.setAttribute(k, v));
+    document.head.appendChild(el);
+  }
+  el.setAttribute('href', href);
+}
+
 /**
  * Dynamic SEO Head component to manage document title, meta descriptions, canonical tags, and structured data
  */
-export default function SEOHead({ title, description, canonical, schema, ogImage }) {
+export default function SEOHead({ title, description, canonical, schema, ogImage, noindex = false }) {
   useEffect(() => {
-    // 1. Update Document Title
     const siteName = 'PhotoKB';
     let formattedTitle = title;
     if (title) {
@@ -13,77 +37,50 @@ export default function SEOHead({ title, description, canonical, schema, ogImage
       document.title = formattedTitle;
     }
 
-    const titleMeta = document.querySelector('meta[name="title"]');
-    if (titleMeta && formattedTitle) {
-      titleMeta.setAttribute('content', formattedTitle);
-    }
+    // 1. Primary Meta Tags
+    setMetaTag('name', 'title', formattedTitle);
+    setMetaTag('name', 'description', description);
+    setMetaTag('name', 'robots', noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1');
 
-    // 2. Update Meta Description
-    if (description) {
-      let metaDesc = document.querySelector('meta[name="description"]');
-      if (!metaDesc) {
-        metaDesc = document.createElement('meta');
-        metaDesc.setAttribute('name', 'description');
-        document.head.appendChild(metaDesc);
-      }
-      metaDesc.setAttribute('content', description);
-    }
-
-    // 3. Update Canonical URL & Alternates
+    // 2. Canonical & Hreflang URLs
     if (canonical !== undefined) {
       const cleanPath = canonical === '/' ? '/' : canonical.startsWith('/') ? canonical : `/${canonical}`;
-      const canonicalUrl = `https://www.photokb.net${cleanPath}`;
+      const rawUrl = `https://www.photokb.net${cleanPath}`;
+      const canonicalUrl = rawUrl.replace(/([^:]\/)\/+/g, '$1');
 
-      let linkCanonical = document.querySelector('link[rel="canonical"]');
-      if (!linkCanonical) {
-        linkCanonical = document.createElement('link');
-        linkCanonical.setAttribute('rel', 'canonical');
-        document.head.appendChild(linkCanonical);
-      }
-      linkCanonical.setAttribute('href', canonicalUrl);
+      setLinkTag('canonical', canonicalUrl);
+      setLinkTag('alternate', canonicalUrl, { hreflang: 'en-US' });
+      setLinkTag('alternate', canonicalUrl, { hreflang: 'x-default' });
 
-      // Keep alternate hreflang tags consistent with canonical URL
-      const altEn = document.querySelector('link[rel="alternate"][hreflang="en-US"]');
-      if (altEn) altEn.setAttribute('href', canonicalUrl);
-
-      const altDefault = document.querySelector('link[rel="alternate"][hreflang="x-default"]');
-      if (altDefault) altDefault.setAttribute('href', canonicalUrl);
-
-      // Open Graph URL
-      const ogUrl = document.querySelector('meta[property="og:url"]');
-      if (ogUrl) ogUrl.setAttribute('content', canonicalUrl);
-
-      const twUrl = document.querySelector('meta[property="twitter:url"]');
-      if (twUrl) twUrl.setAttribute('content', canonicalUrl);
+      // Open Graph & Twitter URL
+      setMetaTag('property', 'og:url', canonicalUrl);
+      setMetaTag('property', 'twitter:url', canonicalUrl);
     }
 
-    // 4. Sync Open Graph & Twitter Titles & Descriptions
-    if (formattedTitle) {
-      const ogTitle = document.querySelector('meta[property="og:title"]');
-      if (ogTitle) ogTitle.setAttribute('content', formattedTitle);
-      const twTitle = document.querySelector('meta[property="twitter:title"]');
-      if (twTitle) twTitle.setAttribute('content', formattedTitle);
-    }
+    // 3. Open Graph & Twitter Titles & Descriptions
+    setMetaTag('property', 'og:site_name', siteName);
+    setMetaTag('property', 'og:type', 'website');
+    setMetaTag('property', 'og:title', formattedTitle);
+    setMetaTag('property', 'twitter:title', formattedTitle);
+    setMetaTag('property', 'twitter:card', 'summary_large_image');
 
     if (description) {
-      const ogDesc = document.querySelector('meta[property="og:description"]');
-      if (ogDesc) ogDesc.setAttribute('content', description);
-      const twDesc = document.querySelector('meta[property="twitter:description"]');
-      if (twDesc) twDesc.setAttribute('content', description);
+      setMetaTag('property', 'og:description', description);
+      setMetaTag('property', 'twitter:description', description);
     }
 
-    // 5. Open Graph / Twitter Image
+    // 4. Open Graph & Twitter Image
     const targetImage = ogImage 
       ? (ogImage.startsWith('http') ? ogImage : `https://www.photokb.net${ogImage.startsWith('/') ? ogImage : `/${ogImage}`}`)
       : 'https://www.photokb.net/og-image.png';
 
-    const ogImgMeta = document.querySelector('meta[property="og:image"]');
-    if (ogImgMeta) ogImgMeta.setAttribute('content', targetImage);
+    setMetaTag('property', 'og:image', targetImage);
+    setMetaTag('property', 'og:image:width', '1200');
+    setMetaTag('property', 'og:image:height', '630');
+    setMetaTag('property', 'og:image:type', 'image/png');
+    setMetaTag('property', 'twitter:image', targetImage);
 
-    const twImgMeta = document.querySelector('meta[property="twitter:image"]');
-    if (twImgMeta) twImgMeta.setAttribute('content', targetImage);
-
-    // 6. Structured Data (JSON-LD Schema)
+    // 5. Structured Data (JSON-LD Schema)
     let scriptSchema = document.querySelector('script[data-schema="page-schema"]');
     if (schema) {
       if (!scriptSchema) {
