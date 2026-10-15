@@ -316,7 +316,7 @@ export default function HomePage({ onOpenSearch }) {
       icon: Camera,
       iconColor: 'text-blue-600',
       iconBg: 'bg-blue-600',
-      badge: '🇺🇸 US Official',
+      badge: 'US Official',
       badgeBg: 'bg-blue-50 text-blue-700',
       arrowBg: 'group-hover:bg-blue-600 group-hover:text-white text-blue-600 bg-blue-50'
     },
