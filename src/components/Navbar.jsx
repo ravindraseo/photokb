@@ -30,7 +30,7 @@ export default function Navbar({ onOpenSearch }) {
       name: 'Image Tools', 
       path: '/category/image-tools',
       dropdown: [
-        { name: 'US Passport Resizer (2x2 in)', path: '/us-passport-photo-resizer', desc: 'Exact 600x600 px State.gov specs' },
+        { name: 'US Passport Resizer', path: '/us-passport-photo-resizer', desc: 'Exact 600x600 px State.gov specs' },
         { name: 'Resize Image in KB', path: '/resize-image-in-kb', desc: 'Compress to 20KB, 50KB, 100KB, 200KB' },
         { name: 'Image Resizer', path: '/image-resizer', desc: 'Resize custom pixels and presets' },
         { name: 'Inches to Pixels (300 DPI)', path: '/inches-to-pixels-photo-resizer', desc: 'Convert inches to print pixels' },
