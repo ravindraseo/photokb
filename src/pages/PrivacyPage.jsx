@@ -7,7 +7,7 @@ export default function PrivacyPage() {
       <SEOHead 
         title="Privacy Policy - PhotoKB Client-Side Data Security" 
         description="PhotoKB privacy policy. We prioritize privacy with 100% in-browser processing, zero server storage, and no tracking." 
-        canonical="/privacy" 
+        canonical="/privacy-policy" 
       />
 
       <div className="bg-gradient-to-b from-blue-50/80 via-white to-slate-50 border-b border-slate-200 py-6 sm:py-8">

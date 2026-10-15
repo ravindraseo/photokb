@@ -431,8 +431,8 @@ export default function HomePage({ onOpenSearch }) {
   return (
     <div className="space-y-5 sm:space-y-7 pb-6 sm:pb-8 overflow-hidden">
       <SEOHead 
-        title="Free Online Tools for Everyone in USA"
-        description="Over 50+ free in-browser tools for image editing, PDF conversion, age calculators, typing tests, SEO meta generators, and text utilities."
+        title="PhotoKB - Free Online Image Resizer, PDF Tools & Calculators in USA"
+        description="Fast, 100% free in-browser tools: US passport photo resizer 2x2, resize image in KB (20KB, 50KB, 100KB), image compression, JPG to PDF converter, and accurate calculators."
         canonical="/"
         schema={FAQ_SCHEMA}
       />

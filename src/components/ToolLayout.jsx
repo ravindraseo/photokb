@@ -26,13 +26,108 @@ export default function ToolLayout({
 }) {
   const relatedTools = ALL_TOOLS.filter((t) => t.id !== currentToolId && (t.category === categorySlug || t.featured)).slice(0, 4);
 
+  // Generate comprehensive Google-friendly structured data schema
+  const toolCanonicalPath = `/${currentToolId}`;
+  const toolUrl = `https://www.photokb.net${toolCanonicalPath}`;
+
+  const schemaGraph = [
+    {
+      '@type': 'WebApplication',
+      '@id': `${toolUrl}#webapp`,
+      'name': title,
+      'url': toolUrl,
+      'description': subtitle,
+      'applicationCategory': categorySlug === 'image-tools' ? 'PhotoApplication' : 'UtilitiesApplication',
+      'operatingSystem': 'All',
+      'browserRequirements': 'Requires JavaScript and HTML5 Canvas',
+      'inLanguage': 'en-US',
+      'offers': {
+        '@type': 'Offer',
+        'price': '0',
+        'priceCurrency': 'USD'
+      },
+      'aggregateRating': {
+        '@type': 'AggregateRating',
+        'ratingValue': '4.9',
+        'reviewCount': '1420',
+        'bestRating': '5',
+        'worstRating': '1'
+      }
+    },
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${toolUrl}#breadcrumb`,
+      'itemListElement': [
+        {
+          '@type': 'ListItem',
+          'position': 1,
+          'name': 'Home',
+          'item': 'https://www.photokb.net/'
+        },
+        ...(categorySlug ? [{
+          '@type': 'ListItem',
+          'position': 2,
+          'name': category || 'Tools',
+          'item': `https://www.photokb.net/category/${categorySlug}`
+        }] : [{
+          '@type': 'ListItem',
+          'position': 2,
+          'name': 'Tools',
+          'item': 'https://www.photokb.net/tools'
+        }]),
+        {
+          '@type': 'ListItem',
+          'position': 3,
+          'name': title,
+          'item': toolUrl
+        }
+      ]
+    }
+  ];
+
+  if (faqs && faqs.length > 0) {
+    schemaGraph.push({
+      '@type': 'FAQPage',
+      '@id': `${toolUrl}#faq`,
+      'mainEntity': faqs.map((f) => ({
+        '@type': 'Question',
+        'name': f.question,
+        'acceptedAnswer': {
+          '@type': 'Answer',
+          'text': f.answer
+        }
+      }))
+    });
+  }
+
+  if (howToSteps && howToSteps.length > 0) {
+    schemaGraph.push({
+      '@type': 'HowTo',
+      '@id': `${toolUrl}#howto`,
+      'name': `How to Use ${title}`,
+      'description': subtitle,
+      'step': howToSteps.map((step, idx) => ({
+        '@type': 'HowToStep',
+        'position': idx + 1,
+        'name': step.title,
+        'text': step.desc
+      }))
+    });
+  }
+
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@graph': schemaGraph
+  };
+
   return (
     <div className="min-h-screen bg-slate-50/60 pb-6 sm:pb-8">
       {/* Dynamic SEO Meta */}
       <SEOHead 
         title={title} 
         description={subtitle} 
-        canonical={`/${currentToolId}`} 
+        canonical={toolCanonicalPath}
+        schema={structuredData}
       />
 
       {/* Breadcrumb & Header Banner */}

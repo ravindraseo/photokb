@@ -78,10 +78,16 @@ export default function App() {
             <Route path="/category/:categorySlug" element={<CategoryPage />} />
             <Route path="/blog" element={<BlogPage />} />
             <Route path="/blog/:id" element={<BlogPostPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/privacy" element={<PrivacyPage />} />
-            <Route path="/terms" element={<TermsPage />} />
+            {/* Core Static Brand Pages */}
+            <Route path="/about-us" element={<AboutPage />} />
+            <Route path="/about" element={<Navigate to="/about-us" replace />} />
+            <Route path="/contact-us" element={<ContactPage />} />
+            <Route path="/contact" element={<Navigate to="/contact-us" replace />} />
+            <Route path="/privacy-policy" element={<PrivacyPage />} />
+            <Route path="/privacy" element={<Navigate to="/privacy-policy" replace />} />
+            <Route path="/terms-and-conditions" element={<TermsPage />} />
+            <Route path="/terms-and-conditions/*" element={<TermsPage />} />
+            <Route path="/terms" element={<Navigate to="/terms-and-conditions" replace />} />
 
             {/* Direct Tool Routes (without /tools/ prefix) */}
             <Route path="/image-resizer" element={<ImageResizer />} />
@@ -104,6 +110,7 @@ export default function App() {
             <Route path="/resize-image-in-kb" element={<ResizeImageInKb />} />
             <Route path="/compress-image-to-100kb" element={<ResizeImageInKb />} />
             <Route path="/image-compress-to-100kb" element={<ResizeImageInKb />} />
+            <Route path="/image-compressor" element={<CompressImage />} />
             <Route path="/jpg-compressor" element={<CompressImage />} />
             <Route path="/png-compressor" element={<CompressImage />} />
             <Route path="/image-format-converter" element={<ImageResizer />} />

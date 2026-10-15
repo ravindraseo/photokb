@@ -24,12 +24,50 @@ export default function AllToolsPage() {
     return matchesQuery && matchesCategory;
   });
 
+  const allToolsSchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'CollectionPage',
+        '@id': 'https://www.photokb.net/tools#directory',
+        name: 'All Online Tools Directory | PhotoKB',
+        description: 'Complete catalogue of 50+ free in-browser tools categorized by Image Tools, PDF Tools, Calculators, Text Tools, SEO Tools, and Developer Tools.',
+        url: 'https://www.photokb.net/tools',
+        hasPart: ALL_TOOLS.map((t) => ({
+          '@type': 'WebApplication',
+          name: t.name,
+          description: t.description,
+          url: `https://www.photokb.net${t.route}`
+        }))
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': 'https://www.photokb.net/tools#breadcrumb',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://www.photokb.net/'
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Tools',
+            item: 'https://www.photokb.net/tools'
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-slate-50/50 pb-6 sm:pb-8">
       <SEOHead
         title="All Online Tools Directory"
         description="Complete catalogue of 50+ free in-browser tools categorized by Image Tools, PDF Tools, Calculators, Text Tools, SEO Tools, and Developer Tools."
         canonical="/tools"
+        schema={allToolsSchema}
       />
 
       {/* Header Banner */}

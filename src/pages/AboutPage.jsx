@@ -9,7 +9,7 @@ export default function AboutPage() {
       <SEOHead 
         title="About PhotoKB - Free Online Tools for Everyone in USA" 
         description="Learn about PhotoKB, our mission to provide lightning-fast, 100% free client-side online tools with zero server storage and complete user privacy." 
-        canonical="/about" 
+        canonical="/about-us" 
       />
 
       <div className="bg-gradient-to-b from-blue-50/80 via-white to-slate-50 border-b border-slate-200 py-6 sm:py-8">

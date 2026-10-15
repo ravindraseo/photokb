@@ -14,12 +14,56 @@ export default function CategoryPage() {
 
   const tools = ALL_TOOLS.filter((t) => t.category === categorySlug);
 
+  const categorySchema = {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'CollectionPage',
+        '@id': `https://www.photokb.net/category/${categorySlug}#category`,
+        name: `${category.name} - Free Online Utilities`,
+        description: category.description,
+        url: `https://www.photokb.net/category/${categorySlug}`,
+        hasPart: tools.map((t) => ({
+          '@type': 'WebApplication',
+          name: t.name,
+          description: t.description,
+          url: `https://www.photokb.net${t.route}`
+        }))
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `https://www.photokb.net/category/${categorySlug}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://www.photokb.net/'
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Tools',
+            item: 'https://www.photokb.net/tools'
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: category.name,
+            item: `https://www.photokb.net/category/${categorySlug}`
+          }
+        ]
+      }
+    ]
+  };
+
   return (
     <div className="min-h-screen bg-slate-50/60 pb-6 sm:pb-8">
       <SEOHead
         title={`${category.name} - Free Online Utilities`}
         description={category.description}
         canonical={`/category/${categorySlug}`}
+        schema={categorySchema}
       />
 
       {/* Category Header */}

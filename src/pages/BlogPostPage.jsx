@@ -29,7 +29,10 @@ export default function BlogPostPage() {
     (id === 'jpg-vs-png-which-image-format-should-you-use' && p.id === 'jpg-vs-png') ||
     (id === 'jpg-vs-png' && p.id === 'jpg-vs-png-which-image-format-should-you-use') ||
     (id === 'us-passport-photo-size-complete-guide' && p.id === 'us-passport-photo-size-guide') ||
-    (id === 'us-passport-photo-size-guide' && p.id === 'us-passport-photo-size-complete-guide')
+    (id === 'us-passport-photo-size-guide' && p.id === 'us-passport-photo-size-complete-guide') ||
+    (id === 'how-to-resize-photo-for-us-passport-and-visa-online' && p.id === 'us-passport-photo-size-guide') ||
+    (id === 'how-to-compress-image-size-without-losing-quality' && p.id === 'how-to-compress-an-image-without-losing-quality') ||
+    (id === 'how-to-make-2x2-photo' && p.id === 'how-to-make-a-2x2-photo-online')
   ) || BLOG_POSTS[0];
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
 
@@ -62,12 +65,12 @@ export default function BlogPostPage() {
     author: {
       '@type': 'Organization',
       name: post.author || 'PhotoKB Team',
-      url: 'https://photokb.net/'
+      url: 'https://www.photokb.net/'
     },
     publisher: {
       '@type': 'Organization',
       name: 'PhotoKB',
-      url: 'https://photokb.net/'
+      url: 'https://www.photokb.net/'
     },
     ...(post.faqs && post.faqs.length > 0 ? {
       mainEntity: {
@@ -91,6 +94,7 @@ export default function BlogPostPage() {
         description={post.metaDescription || post.summary} 
         canonical={`/blog/${post.id}`} 
         schema={articleSchema}
+        ogImage={post.featuredImage}
       />
 
       {/* Article Header */}

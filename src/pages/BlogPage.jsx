@@ -5,12 +5,34 @@ import { Calendar, Clock, ArrowRight, FileText, Sparkles } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
 export default function BlogPage() {
+  const blogCollectionSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Blog',
+    '@id': 'https://www.photokb.net/blog#blog',
+    name: 'PhotoKB Blog & Productivity Guides',
+    description: 'Step-by-step tutorials, formatting guides, and image optimization guides from PhotoKB experts.',
+    url: 'https://www.photokb.net/blog',
+    publisher: {
+      '@type': 'Organization',
+      name: 'PhotoKB',
+      url: 'https://www.photokb.net/'
+    },
+    blogPost: BLOG_POSTS.map((post) => ({
+      '@type': 'BlogPosting',
+      headline: post.title,
+      description: post.summary,
+      url: `https://www.photokb.net/blog/${post.id}`,
+      datePublished: '2026-10-11'
+    }))
+  };
+
   return (
     <div className="min-h-screen bg-slate-50/50 pb-12 sm:pb-16">
       <SEOHead
         title="Blog & Productivity Guides"
         description="Step-by-step tutorials, PDF tips, image optimization guides, and typing speed improvement habits from PhotoKB experts."
         canonical="/blog"
+        schema={blogCollectionSchema}
       />
 
       {/* Blog Hero */}

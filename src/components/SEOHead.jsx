@@ -1,17 +1,24 @@
 import { useEffect } from 'react';
 
 /**
- * Dynamic SEO Head component to manage document title, meta descriptions, and canonical tags
+ * Dynamic SEO Head component to manage document title, meta descriptions, canonical tags, and structured data
  */
-export default function SEOHead({ title, description, canonical, schema }) {
+export default function SEOHead({ title, description, canonical, schema, ogImage }) {
   useEffect(() => {
-    // Update Title
+    // 1. Update Document Title
+    const siteName = 'PhotoKB';
+    let formattedTitle = title;
     if (title) {
-      const formattedTitle = title.includes('PhotoKB') ? title : `${title} | PhotoKB`;
+      formattedTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
       document.title = formattedTitle;
     }
 
-    // Update Meta Description
+    const titleMeta = document.querySelector('meta[name="title"]');
+    if (titleMeta && formattedTitle) {
+      titleMeta.setAttribute('content', formattedTitle);
+    }
+
+    // 2. Update Meta Description
     if (description) {
       let metaDesc = document.querySelector('meta[name="description"]');
       if (!metaDesc) {
@@ -22,20 +29,36 @@ export default function SEOHead({ title, description, canonical, schema }) {
       metaDesc.setAttribute('content', description);
     }
 
-    // Update Canonical URL
-    if (canonical) {
+    // 3. Update Canonical URL & Alternates
+    if (canonical !== undefined) {
+      const cleanPath = canonical === '/' ? '/' : canonical.startsWith('/') ? canonical : `/${canonical}`;
+      const canonicalUrl = `https://www.photokb.net${cleanPath}`;
+
       let linkCanonical = document.querySelector('link[rel="canonical"]');
       if (!linkCanonical) {
         linkCanonical = document.createElement('link');
         linkCanonical.setAttribute('rel', 'canonical');
         document.head.appendChild(linkCanonical);
       }
-      linkCanonical.setAttribute('href', `https://photokb.net${canonical}`);
+      linkCanonical.setAttribute('href', canonicalUrl);
+
+      // Keep alternate hreflang tags consistent with canonical URL
+      const altEn = document.querySelector('link[rel="alternate"][hreflang="en-US"]');
+      if (altEn) altEn.setAttribute('href', canonicalUrl);
+
+      const altDefault = document.querySelector('link[rel="alternate"][hreflang="x-default"]');
+      if (altDefault) altDefault.setAttribute('href', canonicalUrl);
+
+      // Open Graph URL
+      const ogUrl = document.querySelector('meta[property="og:url"]');
+      if (ogUrl) ogUrl.setAttribute('content', canonicalUrl);
+
+      const twUrl = document.querySelector('meta[property="twitter:url"]');
+      if (twUrl) twUrl.setAttribute('content', canonicalUrl);
     }
 
-    // Sync Open Graph & Twitter title and description
-    if (title) {
-      const formattedTitle = title.includes('PhotoKB') ? title : `${title} | PhotoKB`;
+    // 4. Sync Open Graph & Twitter Titles & Descriptions
+    if (formattedTitle) {
       const ogTitle = document.querySelector('meta[property="og:title"]');
       if (ogTitle) ogTitle.setAttribute('content', formattedTitle);
       const twTitle = document.querySelector('meta[property="twitter:title"]');
@@ -49,7 +72,18 @@ export default function SEOHead({ title, description, canonical, schema }) {
       if (twDesc) twDesc.setAttribute('content', description);
     }
 
-    // Structured Data (JSON-LD Schema)
+    // 5. Open Graph / Twitter Image
+    const targetImage = ogImage 
+      ? (ogImage.startsWith('http') ? ogImage : `https://www.photokb.net${ogImage.startsWith('/') ? ogImage : `/${ogImage}`}`)
+      : 'https://www.photokb.net/og-image.png';
+
+    const ogImgMeta = document.querySelector('meta[property="og:image"]');
+    if (ogImgMeta) ogImgMeta.setAttribute('content', targetImage);
+
+    const twImgMeta = document.querySelector('meta[property="twitter:image"]');
+    if (twImgMeta) twImgMeta.setAttribute('content', targetImage);
+
+    // 6. Structured Data (JSON-LD Schema)
     let scriptSchema = document.querySelector('script[data-schema="page-schema"]');
     if (schema) {
       if (!scriptSchema) {
@@ -62,7 +96,7 @@ export default function SEOHead({ title, description, canonical, schema }) {
     } else if (scriptSchema) {
       scriptSchema.remove();
     }
-  }, [title, description, canonical, schema]);
+  }, [title, description, canonical, schema, ogImage]);
 
   return null;
 }

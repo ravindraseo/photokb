@@ -74,23 +74,23 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-slate-400 hover:text-white hover:translate-x-1 inline-block transition-all">
+                <Link to="/about-us" className="text-slate-400 hover:text-white hover:translate-x-1 inline-block transition-all">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-slate-400 hover:text-white hover:translate-x-1 inline-block transition-all">
+                <Link to="/contact-us" className="text-slate-400 hover:text-white hover:translate-x-1 inline-block transition-all">
                   Contact Us
                 </Link>
               </li>
               <li>
-                <Link to="/privacy" className="text-slate-400 hover:text-white hover:translate-x-1 inline-block transition-all">
+                <Link to="/privacy-policy" className="text-slate-400 hover:text-white hover:translate-x-1 inline-block transition-all">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link to="/terms" className="text-slate-400 hover:text-white hover:translate-x-1 inline-block transition-all">
-                  Terms of Service
+                <Link to="/terms-and-conditions" className="text-slate-400 hover:text-white hover:translate-x-1 inline-block transition-all">
+                  Terms and Conditions
                 </Link>
               </li>
             </ul>

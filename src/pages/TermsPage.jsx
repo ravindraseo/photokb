@@ -6,9 +6,9 @@ export default function TermsPage() {
   return (
     <div className="min-h-screen bg-slate-50/50 pb-10 sm:pb-14">
       <SEOHead 
-        title="Terms of Service - PhotoKB" 
+        title="Terms and Conditions - PhotoKB" 
         description="Terms of service and license terms for using PhotoKB free online tools and utilities." 
-        canonical="/terms" 
+        canonical="/terms-and-conditions" 
       />
 
       <div className="bg-gradient-to-b from-blue-50/80 via-white to-slate-50 border-b border-slate-200 py-6 sm:py-8">

@@ -16,7 +16,7 @@ export default function ContactPage() {
       <SEOHead 
         title="Contact PhotoKB Support - USA & Global Help" 
         description="Get in touch with the PhotoKB support team. Suggest a new tool, report an issue, or ask questions." 
-        canonical="/contact" 
+        canonical="/contact-us" 
       />
 
       <div className="bg-gradient-to-b from-blue-50/80 via-white to-slate-50 border-b border-slate-200 py-6 sm:py-8">

@@ -19,20 +19,20 @@ export const BLOG_POSTS = [
       '@type': 'BlogPosting',
       headline: 'How to Resize an Image Online for Free',
       description: 'Learn how to resize an image online for free and choose suitable image dimensions.',
-      image: 'https://photokb.net/blog/how-to-resize-an-image-online.webp',
+      image: 'https://www.photokb.net/blog/how-to-resize-an-image-online.webp',
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://photokb.net/blog/how-to-resize-an-image-online/'
+        '@id': 'https://www.photokb.net/blog/how-to-resize-an-image-online/'
       },
       author: {
         '@type': 'Organization',
         name: 'PhotoKB Team',
-        url: 'https://photokb.net/'
+        url: 'https://www.photokb.net/'
       },
       publisher: {
         '@type': 'Organization',
         name: 'PhotoKB',
-        url: 'https://photokb.net/'
+        url: 'https://www.photokb.net/'
       },
       datePublished: '2026-10-11',
       dateModified: '2026-10-11',
@@ -78,7 +78,7 @@ Follow these simple steps to resize your photo.
 
 ### Step 1: Open the Image Resizer
 
-Visit the [PhotoKB Image Resizer](https://photokb.net/image-resizer/) and open the image upload tool.
+Visit the [PhotoKB Image Resizer](https://www.photokb.net/image-resizer/) and open the image upload tool.
 
 ### Step 2: Upload Your Image
 
@@ -94,7 +94,7 @@ Check the resized image before downloading it. Make sure important details remai
 
 ### Step 5: Download Your Image
 
-Download the resized file and check its dimensions. If the file size is still too large, try the [PhotoKB Image Compressor](https://photokb.net/image-compressor/).
+Download the resized file and check its dimensions. If the file size is still too large, try the [PhotoKB Image Compressor](https://www.photokb.net/image-compressor/).
 
 ## How to Choose the Right Image Dimensions
 
@@ -114,7 +114,7 @@ It can. Reducing an image's dimensions removes pixels, so the original detail ca
 
 For the best results, start with a high-quality original, avoid repeatedly resizing the same file, and preview the final output at its intended display size.
 
-If your goal is to reduce the file size without changing the dimensions, use an [image compression tool](https://photokb.net/image-compressor/) instead.
+If your goal is to reduce the file size without changing the dimensions, use an [image compression tool](https://www.photokb.net/image-compressor/) instead.
 
 ## Common Image Resizing Mistakes
 
@@ -124,7 +124,7 @@ Avoid entering width and height values that distort the original proportions. Do
 
 Resizing an image online is a practical way to prepare photos for websites, applications, and everyday sharing. Choose dimensions based on the intended use, preserve the aspect ratio when necessary, and review the result before downloading. If you also need a smaller file, combine resizing with compression for a more suitable result.
 
-Explore more tools on [PhotoKB](https://photokb.net/) to prepare your images for different digital needs.
+Explore more tools on [PhotoKB](https://www.photokb.net/) to prepare your images for different digital needs.
 `
   },
   {
@@ -147,20 +147,20 @@ Explore more tools on [PhotoKB](https://photokb.net/) to prepare your images for
       '@type': 'BlogPosting',
       headline: 'How to Compress an Image Without Losing Quality',
       description: 'Learn how to compress images while preserving visual quality. Discover image formats, compression settings, and practical ways to reduce file size.',
-      image: 'https://photokb.net/blog/how-to-compress-an-image-without-losing-quality.webp',
+      image: 'https://www.photokb.net/blog/how-to-compress-an-image-without-losing-quality.webp',
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://photokb.net/blog/how-to-compress-an-image-without-losing-quality/'
+        '@id': 'https://www.photokb.net/blog/how-to-compress-an-image-without-losing-quality/'
       },
       author: {
         '@type': 'Organization',
         name: 'PhotoKB Team',
-        url: 'https://photokb.net/'
+        url: 'https://www.photokb.net/'
       },
       publisher: {
         '@type': 'Organization',
         name: 'PhotoKB',
-        url: 'https://photokb.net/'
+        url: 'https://www.photokb.net/'
       },
       datePublished: '2026-10-12',
       dateModified: '2026-10-12',
@@ -208,7 +208,7 @@ The best method depends on the image, its intended use, and your target file siz
 
 ### Step 1: Open PhotoKB Image Compressor
 
-Visit the [PhotoKB Image Compressor](https://photokb.net/image-compressor/) to begin.
+Visit the [PhotoKB Image Compressor](https://www.photokb.net/image-compressor/) to begin.
 
 ### Step 2: Select Your Image
 
@@ -224,7 +224,7 @@ Look for blurry edges, color banding, noise, or loss of fine details. Compare th
 
 ### Step 5: Download the Compressed Image
 
-Save the version that provides the best balance between file size and visual quality. If you need a specific limit, try [Compress Image to 100KB](https://photokb.net/compress-image-to-100kb/).
+Save the version that provides the best balance between file size and visual quality. If you need a specific limit, try [Compress Image to 100KB](https://www.photokb.net/compress-image-to-100kb/).
 
 ## Choose the Right Image Format
 
@@ -234,7 +234,7 @@ The format can have a significant effect on file size.
 - **PNG:** Useful for graphics that require transparency or crisp edges, though files can be larger.
 - **WebP:** Can provide efficient compression for many photographs and web graphics.
 
-For more information, read our guide to [JPG vs PNG](https://photokb.net/blog/jpg-vs-png/).
+For more information, read our guide to [JPG vs PNG](https://www.photokb.net/blog/jpg-vs-png/).
 
 Converting an image to another format can change its appearance or remove transparency. Check the result before replacing your original file.
 
@@ -272,7 +272,7 @@ Not necessarily. Compression can reduce file size while keeping the same pixel d
 
 ### 4. How can I compress an image to 100KB?
 
-Use the [100KB image compressor](https://photokb.net/image-compress-to-100kb/) if available, review the output size, and adjust dimensions or quality if necessary.
+Use the [100KB image compressor](https://www.photokb.net/image-compress-to-100kb/) if available, review the output size, and adjust dimensions or quality if necessary.
 
 ### 5. Is a smaller image always better for a website?
 
@@ -282,7 +282,7 @@ No. A smaller file can improve loading performance, but images must remain clear
 
 Good image compression is about balance. Choose a suitable format, avoid unnecessarily large dimensions, adjust quality carefully, and compare the result before publishing. With the right settings, you can reduce file size while preserving the details that matter most.
 
-Try the [PhotoKB Image Compressor](https://photokb.net/image-compressor/) to prepare images for websites, email, and everyday sharing.
+Try the [PhotoKB Image Compressor](https://www.photokb.net/image-compressor/) to prepare images for websites, email, and everyday sharing.
 `
   },
   {
@@ -305,20 +305,20 @@ Try the [PhotoKB Image Compressor](https://photokb.net/image-compressor/) to pre
       '@type': 'BlogPosting',
       headline: 'JPG vs PNG: Which Image Format Should You Use?',
       description: 'Compare JPG and PNG formats, including quality, transparency, compression, and common uses.',
-      image: 'https://photokb.net/blog/jpg-vs-png.webp',
+      image: 'https://www.photokb.net/blog/jpg-vs-png.webp',
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://photokb.net/blog/jpg-vs-png/'
+        '@id': 'https://www.photokb.net/blog/jpg-vs-png/'
       },
       author: {
         '@type': 'Organization',
         name: 'PhotoKB Team',
-        url: 'https://photokb.net/'
+        url: 'https://www.photokb.net/'
       },
       publisher: {
         '@type': 'Organization',
         name: 'PhotoKB',
-        url: 'https://photokb.net/'
+        url: 'https://www.photokb.net/'
       },
       datePublished: '2026-10-11',
       dateModified: '2026-10-11',
@@ -385,7 +385,7 @@ Choose JPG when you need to share photographs, prepare images for email, or redu
 
 For example, if you have a high-resolution holiday photograph, converting it to JPG at a suitable quality setting may produce a smaller file that still looks clear.
 
-You can use the [PhotoKB JPG Compressor](https://photokb.net/jpg-compressor/) to explore compression options for supported JPEG files.
+You can use the [PhotoKB JPG Compressor](https://www.photokb.net/jpg-compressor/) to explore compression options for supported JPEG files.
 
 ## When Should You Use PNG?
 
@@ -393,7 +393,7 @@ PNG is generally preferable when transparency matters or when your image contain
 
 For example, a company logo with a transparent background is often better saved as PNG than JPG. JPG does not preserve transparent pixels, so transparent areas may be replaced with a solid background during conversion.
 
-You can use the [PhotoKB PNG Compressor](https://photokb.net/png-compressor/) to reduce the size of supported PNG files.
+You can use the [PhotoKB PNG Compressor](https://www.photokb.net/png-compressor/) to reduce the size of supported PNG files.
 
 ## Can You Convert JPG to PNG or PNG to JPG?
 
@@ -403,7 +403,7 @@ Converting a JPG to PNG will not restore details previously lost through JPG com
 
 Before converting, consider why you need the new format. If your goal is simply to reduce file size, compression or resizing may be more appropriate.
 
-Try the [PhotoKB Image Format Converter](https://photokb.net/image-format-converter/) for supported image conversions.
+Try the [PhotoKB Image Format Converter](https://www.photokb.net/image-format-converter/) for supported image conversions.
 
 ## Which Format Is Better for Websites?
 
@@ -439,7 +439,7 @@ Not necessarily. WebP can be useful for websites, but choose a format based on t
 
 Use JPG for many everyday photographs and PNG when transparency or lossless storage matters. There is no single best format for every image. Consider the image's purpose, desired quality, and file-size requirements before converting or compressing it.
 
-Explore PhotoKB's [image conversion tools](https://photokb.net/image-format-converter/) to prepare images for your website and other digital projects.
+Explore PhotoKB's [image conversion tools](https://www.photokb.net/image-format-converter/) to prepare images for your website and other digital projects.
 `
   },
   {
@@ -462,20 +462,20 @@ Explore PhotoKB's [image conversion tools](https://photokb.net/image-format-conv
       '@type': 'BlogPosting',
       headline: 'US Passport Photo Size: Complete Guide',
       description: 'Understand US passport photo dimensions, framing, background, and preparation requirements.',
-      image: 'https://photokb.net/blog/us-passport-photo-size-guide.webp',
+      image: 'https://www.photokb.net/blog/us-passport-photo-size-guide.webp',
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://photokb.net/blog/us-passport-photo-size-guide/'
+        '@id': 'https://www.photokb.net/blog/us-passport-photo-size-guide/'
       },
       author: {
         '@type': 'Organization',
         name: 'PhotoKB Team',
-        url: 'https://photokb.net/'
+        url: 'https://www.photokb.net/'
       },
       publisher: {
         '@type': 'Organization',
         name: 'PhotoKB',
-        url: 'https://photokb.net/'
+        url: 'https://www.photokb.net/'
       },
       datePublished: '2026-10-11',
       dateModified: '2026-10-11',
@@ -544,7 +544,7 @@ Do not use filters, artificial intelligence, or photo-editing software to change
 
 ## How to Prepare a 2 × 2-Inch Photo
 
-You can use the [PhotoKB 2x2 Photo Maker](https://photokb.net/2x2-photo-maker/) to help prepare an image with the required dimensions.
+You can use the [PhotoKB 2x2 Photo Maker](https://www.photokb.net/2x2-photo-maker/) to help prepare an image with the required dimensions.
 
 1. Select a clear, recent photograph.
 2. Upload it to the tool.
@@ -560,7 +560,7 @@ Digital application requirements may differ from printed photo specifications. T
 
 Check the specific application instructions before preparing your digital file. Do not rely on a general online photo-size guide when the application provides more specific requirements.
 
-If your application requires a particular file size, the [PhotoKB Image Resizer](https://photokb.net/image-resizer/) and [Image Compressor](https://photokb.net/image-compressor/) may help with supported adjustments. Avoid altering the photograph in ways prohibited by the official guidance.
+If your application requires a particular file size, the [PhotoKB Image Resizer](https://www.photokb.net/image-resizer/) and [Image Compressor](https://www.photokb.net/image-compressor/) may help with supported adjustments. Avoid altering the photograph in ways prohibited by the official guidance.
 
 ## Common Mistakes to Avoid
 
@@ -597,7 +597,7 @@ Do not use filters, AI, or photo-editing software to change your appearance or d
 
 Getting the correct US passport photo involves more than setting the image to 2 × 2 inches. The photograph must also meet requirements for recency, framing, background, lighting, and appearance.
 
-Use the official government guidance as your final reference, and use PhotoKB's [2x2 Photo Maker](https://photokb.net/2x2-photo-maker/) only as a preparation aid.
+Use the official government guidance as your final reference, and use PhotoKB's [2x2 Photo Maker](https://www.photokb.net/2x2-photo-maker/) only as a preparation aid.
 `
   },
   {
@@ -620,20 +620,20 @@ Use the official government guidance as your final reference, and use PhotoKB's 
       '@type': 'BlogPosting',
       headline: 'How to Make a 2x2 Photo Online',
       description: 'Learn how to crop, resize, and download a 2x2-inch photo online.',
-      image: 'https://photokb.net/blog/how-to-make-a-2x2-photo-online.webp',
+      image: 'https://www.photokb.net/blog/how-to-make-a-2x2-photo-online.webp',
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://photokb.net/blog/how-to-make-a-2x2-photo-online/'
+        '@id': 'https://www.photokb.net/blog/how-to-make-a-2x2-photo-online/'
       },
       author: {
         '@type': 'Organization',
         name: 'PhotoKB Team',
-        url: 'https://photokb.net/'
+        url: 'https://www.photokb.net/'
       },
       publisher: {
         '@type': 'Organization',
         name: 'PhotoKB',
-        url: 'https://photokb.net/'
+        url: 'https://www.photokb.net/'
       },
       datePublished: '2026-10-11',
       dateModified: '2026-10-11',
@@ -679,7 +679,7 @@ If you are preparing a passport photo, review the [official US passport photo re
 
 ### Step 1: Open the PhotoKB 2x2 Photo Maker
 
-Visit the [PhotoKB 2x2 Photo Maker](https://photokb.net/2x2-photo-maker/) to access the photo preparation tool.
+Visit the [PhotoKB 2x2 Photo Maker](https://www.photokb.net/2x2-photo-maker/) to access the photo preparation tool.
 
 ### Step 2: Upload a Suitable Photograph
 
@@ -715,7 +715,7 @@ Some applications specify different physical dimensions, pixel dimensions, file 
 
 Before downloading or printing the photo, check the instructions provided by the receiving organization.
 
-If you need to adjust the image's dimensions, you can also explore the [PhotoKB Image Resizer](https://photokb.net/image-resizer/). If the file is too large, the [Image Compressor](https://photokb.net/image-compressor/) may help reduce its size.
+If you need to adjust the image's dimensions, you can also explore the [PhotoKB Image Resizer](https://www.photokb.net/image-resizer/). If the file is too large, the [Image Compressor](https://www.photokb.net/image-compressor/) may help reduce its size.
 
 ## Common Mistakes to Avoid
 
@@ -752,7 +752,7 @@ Yes, if the tool supports the file format. Compression may reduce file size, but
 
 Making a 2×2 photo online is straightforward when you begin with a clear image and follow the correct cropping and sizing instructions. Always confirm the requirements for your particular application before submitting or printing the result.
 
-Try the [PhotoKB 2x2 Photo Maker](https://photokb.net/2x2-photo-maker/) to prepare your image, and use the official requirements as your final reference when creating a US passport photo.
+Try the [PhotoKB 2x2 Photo Maker](https://www.photokb.net/2x2-photo-maker/) to prepare your image, and use the official requirements as your final reference when creating a US passport photo.
 `
   },
   {
@@ -775,20 +775,20 @@ Try the [PhotoKB 2x2 Photo Maker](https://photokb.net/2x2-photo-maker/) to prepa
       '@type': 'BlogPosting',
       headline: 'How to Reduce Image File Size',
       description: 'Learn practical ways to reduce image file size through compression, resizing, and format selection.',
-      image: 'https://photokb.net/blog/how-to-reduce-image-file-size.webp',
+      image: 'https://www.photokb.net/blog/how-to-reduce-image-file-size.webp',
       mainEntityOfPage: {
         '@type': 'WebPage',
-        '@id': 'https://photokb.net/blog/how-to-reduce-image-file-size/'
+        '@id': 'https://www.photokb.net/blog/how-to-reduce-image-file-size/'
       },
       author: {
         '@type': 'Organization',
         name: 'PhotoKB Team',
-        url: 'https://photokb.net/'
+        url: 'https://www.photokb.net/'
       },
       publisher: {
         '@type': 'Organization',
         name: 'PhotoKB',
-        url: 'https://photokb.net/'
+        url: 'https://www.photokb.net/'
       },
       datePublished: '2026-10-11',
       dateModified: '2026-10-11',
@@ -836,7 +836,7 @@ This is why two images with the same width and height can have very different fi
 
 Compression reduces the amount of data stored in an image. Lossy compression can create much smaller files, while lossless compression preserves the image information.
 
-Use the [PhotoKB Image Compressor](https://photokb.net/image-compressor/) to explore compression options for supported image formats.
+Use the [PhotoKB Image Compressor](https://www.photokb.net/image-compressor/) to explore compression options for supported image formats.
 
 ### 2. Resize the Dimensions
 
@@ -844,7 +844,7 @@ If you are using a very large image in a small area, reducing its width and heig
 
 For example, an image intended for a small webpage thumbnail may not need the same dimensions as the original photograph.
 
-Open the [PhotoKB Image Resizer](https://photokb.net/image-resizer/) and select dimensions appropriate for your intended use.
+Open the [PhotoKB Image Resizer](https://www.photokb.net/image-resizer/) and select dimensions appropriate for your intended use.
 
 ### 3. Choose a Suitable Format
 
@@ -862,7 +862,7 @@ Always retain enough resolution for the intended display or printing size.
 
 Some applications require images below a specific limit, such as 100KB, 200KB, or 500KB.
 
-If you have a strict limit, use a suitable target-size tool where available. The [PhotoKB Compress Image to 100KB tool](https://photokb.net/compress-image-to-100kb/) can be a useful starting point when that limit is appropriate.
+If you have a strict limit, use a suitable target-size tool where available. The [PhotoKB Compress Image to 100KB tool](https://www.photokb.net/compress-image-to-100kb/) can be a useful starting point when that limit is appropriate.
 
 If the output is still too large, try adjusting the dimensions or compression settings. Check the final file size after downloading.
 
@@ -914,7 +914,7 @@ Lossless compression can preserve image information, although file-size reductio
 
 Reducing image file size is easier when you choose the right combination of dimensions, format, and compression settings. Start with the intended use, check any file-size limits, and preview the output before submitting or publishing it.
 
-Use PhotoKB's [Image Compressor](https://photokb.net/image-compressor/) and [Image Resizer](https://photokb.net/image-resizer/) to prepare images for websites, email, and online applications.
+Use PhotoKB's [Image Compressor](https://www.photokb.net/image-compressor/) and [Image Resizer](https://www.photokb.net/image-resizer/) to prepare images for websites, email, and online applications.
 `
   }
 ];

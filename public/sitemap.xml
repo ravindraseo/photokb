@@ -4,239 +4,365 @@
 
   <!-- Core Pages -->
   <url>
-    <loc>https://photokb.com/</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://www.photokb.net/</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.photokb.net/" />
   </url>
 
   <url>
-    <loc>https://photokb.com/tools</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://www.photokb.net/tools</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/tools" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/tools" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.photokb.net/tools" />
   </url>
 
-  <!-- Popular High-Volume US Tools -->
+  <!-- Popular High-Volume Image & US Passport Tools -->
   <url>
-    <loc>https://photokb.com/us-passport-photo-resizer</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://www.photokb.net/us-passport-photo-resizer</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.98</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/us-passport-photo-resizer" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/us-passport-photo-resizer" />
   </url>
 
   <url>
-    <loc>https://photokb.com/resize-image-in-kb</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://www.photokb.net/resize-image-in-kb</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.98</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/resize-image-in-kb" />
+  </url>
+
+  <url>
+    <loc>https://www.photokb.net/image-resizer</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/resize-image-in-kb" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/image-resizer" />
   </url>
 
   <url>
-    <loc>https://photokb.com/inches-to-pixels-photo-resizer</loc>
-    <lastmod>2026-10-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/inches-to-pixels-photo-resizer" />
-  </url>
-
-  <url>
-    <loc>https://photokb.com/image-resizer</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://www.photokb.net/compress-image</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/image-resizer" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/compress-image" />
   </url>
 
   <url>
-    <loc>https://photokb.com/compress-image</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://www.photokb.net/inches-to-pixels-photo-resizer</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/compress-image" />
+    <priority>0.92</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/inches-to-pixels-photo-resizer" />
   </url>
 
   <url>
-    <loc>https://photokb.com/jpg-to-pdf</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://www.photokb.net/compress-image-to-100kb</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/jpg-to-pdf" />
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/compress-image-to-100kb" />
   </url>
 
   <url>
-    <loc>https://photokb.com/pdf-to-jpg</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://www.photokb.net/2x2-photo-maker</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/2x2-photo-maker" />
+  </url>
+
+  <!-- PDF Tools -->
+  <url>
+    <loc>https://www.photokb.net/jpg-to-pdf</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/jpg-to-pdf" />
+  </url>
+
+  <url>
+    <loc>https://www.photokb.net/pdf-to-jpg</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/pdf-to-jpg" />
+  </url>
+
+  <url>
+    <loc>https://www.photokb.net/merge-pdf</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/merge-pdf" />
+  </url>
+
+  <url>
+    <loc>https://www.photokb.net/split-pdf</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/split-pdf" />
+  </url>
+
+  <!-- Calculator Tools -->
+  <url>
+    <loc>https://www.photokb.net/age-calculator</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/pdf-to-jpg" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/age-calculator" />
   </url>
 
   <url>
-    <loc>https://photokb.com/merge-pdf</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://www.photokb.net/percentage-calculator</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/merge-pdf" />
+    <priority>0.82</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/percentage-calculator" />
   </url>
 
+  <!-- Text & Productivity Tools -->
   <url>
-    <loc>https://photokb.com/split-pdf</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://www.photokb.net/typing-test</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/split-pdf" />
+    <priority>0.82</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/typing-test" />
   </url>
 
   <url>
-    <loc>https://photokb.com/age-calculator</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://www.photokb.net/word-counter</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/age-calculator" />
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/word-counter" />
   </url>
 
   <url>
-    <loc>https://photokb.com/percentage-calculator</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://www.photokb.net/case-converter</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/percentage-calculator" />
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/case-converter" />
   </url>
 
+  <!-- SEO & Developer Tools -->
   <url>
-    <loc>https://photokb.com/typing-test</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://www.photokb.net/meta-tag-generator</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/typing-test" />
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/meta-tag-generator" />
   </url>
 
   <url>
-    <loc>https://photokb.com/word-counter</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://www.photokb.net/unit-converter</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/word-counter" />
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/unit-converter" />
   </url>
 
   <url>
-    <loc>https://photokb.com/meta-tag-generator</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://www.photokb.net/qr-generator</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/qr-generator" />
+  </url>
+
+  <url>
+    <loc>https://www.photokb.net/json-formatter</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/json-formatter" />
+  </url>
+
+  <url>
+    <loc>https://www.photokb.net/password-generator</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/password-generator" />
+  </url>
+
+  <url>
+    <loc>https://www.photokb.net/lorem-generator</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/meta-tag-generator" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/lorem-generator" />
   </url>
 
   <url>
-    <loc>https://photokb.com/unit-converter</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://www.photokb.net/base64-converter</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/unit-converter" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/base64-converter" />
   </url>
 
   <!-- Categories -->
   <url>
-    <loc>https://photokb.com/category/image-tools</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://www.photokb.net/category/image-tools</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/category/image-tools" />
-  </url>
-
-  <url>
-    <loc>https://photokb.com/category/pdf-tools</loc>
-    <lastmod>2026-10-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/category/pdf-tools" />
-  </url>
-
-  <url>
-    <loc>https://photokb.com/category/calculator-tools</loc>
-    <lastmod>2026-10-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/category/calculator-tools" />
-  </url>
-
-  <url>
-    <loc>https://photokb.com/category/seo-tools</loc>
-    <lastmod>2026-10-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/category/seo-tools" />
-  </url>
-
-  <!-- Blog & USA Guides -->
-  <url>
-    <loc>https://photokb.com/blog</loc>
-    <lastmod>2026-10-10</lastmod>
-    <changefreq>daily</changefreq>
     <priority>0.85</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/blog" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/category/image-tools" />
   </url>
 
   <url>
-    <loc>https://photokb.com/blog/how-to-resize-photo-for-us-passport-and-visa-online</loc>
-    <lastmod>2026-10-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/blog/how-to-resize-photo-for-us-passport-and-visa-online" />
+    <loc>https://www.photokb.net/category/pdf-tools</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/category/pdf-tools" />
   </url>
 
   <url>
-    <loc>https://photokb.com/blog/how-to-convert-jpg-to-pdf-online-free</loc>
-    <lastmod>2026-10-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/blog/how-to-convert-jpg-to-pdf-online-free" />
+    <loc>https://www.photokb.net/category/calculator-tools</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/category/calculator-tools" />
   </url>
 
   <url>
-    <loc>https://photokb.com/blog/how-to-compress-image-size-without-losing-quality</loc>
-    <lastmod>2026-10-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/blog/how-to-compress-image-size-without-losing-quality" />
-  </url>
-
-  <!-- Static Pages -->
-  <url>
-    <loc>https://photokb.com/about</loc>
-    <lastmod>2026-10-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/about" />
+    <loc>https://www.photokb.net/category/text-tools</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/category/text-tools" />
   </url>
 
   <url>
-    <loc>https://photokb.com/contact</loc>
-    <lastmod>2026-10-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/contact" />
+    <loc>https://www.photokb.net/category/seo-tools</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/category/seo-tools" />
   </url>
 
   <url>
-    <loc>https://photokb.com/privacy</loc>
-    <lastmod>2026-10-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/privacy" />
+    <loc>https://www.photokb.net/category/developer-tools</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/category/developer-tools" />
   </url>
 
   <url>
-    <loc>https://photokb.com/terms</loc>
-    <lastmod>2026-10-10</lastmod>
+    <loc>https://www.photokb.net/category/unit-converter</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/category/unit-converter" />
+  </url>
+
+  <url>
+    <loc>https://www.photokb.net/category/other-tools</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/category/other-tools" />
+  </url>
+
+  <!-- Blog Index & In-Depth Guides -->
+  <url>
+    <loc>https://www.photokb.net/blog</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.88</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/blog" />
+  </url>
+
+  <url>
+    <loc>https://www.photokb.net/blog/how-to-resize-an-image-online</loc>
+    <lastmod>2026-10-15</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://photokb.com/terms" />
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/blog/how-to-resize-an-image-online" />
+  </url>
+
+  <url>
+    <loc>https://www.photokb.net/blog/how-to-compress-an-image-without-losing-quality</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/blog/how-to-compress-an-image-without-losing-quality" />
+  </url>
+
+  <url>
+    <loc>https://www.photokb.net/blog/jpg-vs-png</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/blog/jpg-vs-png" />
+  </url>
+
+  <url>
+    <loc>https://www.photokb.net/blog/us-passport-photo-size-guide</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.92</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/blog/us-passport-photo-size-guide" />
+  </url>
+
+  <url>
+    <loc>https://www.photokb.net/blog/how-to-make-a-2x2-photo-online</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/blog/how-to-make-a-2x2-photo-online" />
+  </url>
+
+  <url>
+    <loc>https://www.photokb.net/blog/how-to-reduce-image-file-size</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/blog/how-to-reduce-image-file-size" />
+  </url>
+
+  <!-- Static Brand Pages (Using requested official URLs) -->
+  <url>
+    <loc>https://www.photokb.net/about-us</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/about-us" />
+  </url>
+
+  <url>
+    <loc>https://www.photokb.net/contact-us</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/contact-us" />
+  </url>
+
+  <url>
+    <loc>https://www.photokb.net/privacy-policy</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/privacy-policy" />
+  </url>
+
+  <url>
+    <loc>https://www.photokb.net/terms-and-conditions</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/terms-and-conditions" />
   </url>
 
 </urlset>
