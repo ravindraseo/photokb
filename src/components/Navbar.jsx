@@ -33,7 +33,7 @@ export default function Navbar({ onOpenSearch }) {
         { name: 'US Passport Resizer', path: '/us-passport-photo-resizer', desc: 'Exact 600x600 px State.gov specs' },
         { name: 'Resize Image in KB', path: '/resize-image-in-kb', desc: 'Compress to 20KB, 50KB, 100KB, 200KB' },
         { name: 'Image Resizer', path: '/image-resizer', desc: 'Resize custom pixels and presets' },
-        { name: 'Inches to Pixels (300 DPI)', path: '/inches-to-pixels-photo-resizer', desc: 'Convert inches to print pixels' },
+        { name: 'Inches to Pixels', path: '/inches-to-pixels-photo-resizer', desc: 'Convert inches to print pixels' },
         { name: 'Compress Image', path: '/compress-image', desc: 'Reduce file size with no quality loss' },
         { name: 'View All Image Tools', path: '/category/image-tools', isAll: true }
       ]
