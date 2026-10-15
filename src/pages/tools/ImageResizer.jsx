@@ -392,7 +392,7 @@ export default function ImageResizer() {
               {resizedDataUrl ? (
                 <img
                   src={resizedDataUrl}
-                  alt="Resized output"
+                  alt="Resized photo output preview"
                   className="max-h-[460px] object-contain rounded-lg shadow-md border border-slate-200"
                 />
               ) : (

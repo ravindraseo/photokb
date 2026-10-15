@@ -1,16 +1,50 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import ToolLayout from '../../components/ToolLayout';
 import { Upload, Download, RefreshCw, CheckCircle2, Sliders, ShieldCheck } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function ResizeImageInKb() {
+  const location = useLocation();
+  const path = location.pathname.replace(/\/$/, '');
+
+  let defaultPreset = 100;
+  let pageTitle = "Resize Image in KB (Compress Photo to Exact Size)";
+  let pageSubtitle = "Reduce and resize image file size to exact KB (20KB, 50KB, 100KB, 200KB) for USCIS, job applications, and official government portals. 100% free and in-browser safe.";
+  let toolId = "resize-image-in-kb";
+
+  if (path === '/compress-image-to-50kb') {
+    defaultPreset = 50;
+    pageTitle = "Compress Image to 50KB Online Free (High Quality)";
+    pageSubtitle = "Reduce image file size to 50KB or less without losing quality. Ideal for passport photos, exam forms, and US government portal uploads.";
+    toolId = "compress-image-to-50kb";
+  } else if (path === '/compress-image-to-100kb' || path === '/image-compress-to-100kb') {
+    defaultPreset = 100;
+    pageTitle = "Compress Image to 100KB Online Free (Fast & Clear)";
+    pageSubtitle = "Compress JPG, PNG, and WebP images to under 100KB instantly. Perfect for job portals, university admissions, and online submissions.";
+    toolId = "compress-image-to-100kb";
+  } else if (path === '/compress-image-to-200kb') {
+    defaultPreset = 200;
+    pageTitle = "Compress Image to 200KB Online Free (Keep Quality)";
+    pageSubtitle = "Easily compress photos and document scans to under 200KB. Maintains crisp text and vivid colors with zero server uploads.";
+    toolId = "compress-image-to-200kb";
+  } else if (path === '/compress-image-to-500kb') {
+    defaultPreset = 500;
+    pageTitle = "Compress Image to 500KB Online Free (Photo & Document)";
+    pageSubtitle = "Compress high-resolution photos to under 500KB without blur. Fast client-side image compression for web publishing and email.";
+    toolId = "compress-image-to-500kb";
+  }
+
   const [imageSrc, setImageSrc] = useState(null);
   const [originalSizeKb, setOriginalSizeKb] = useState(0);
-  const [targetKb, setTargetKb] = useState(100);
+  const [targetKb, setTargetKb] = useState(defaultPreset);
   const [compressedDataUrl, setCompressedDataUrl] = useState(null);
   const [actualSizeKb, setActualSizeKb] = useState(0);
   const [isProcessing, setIsProcessing] = useState(false);
   const [fileName, setFileName] = useState('resized-photo');
+
+  useEffect(() => {
+    setTargetKb(defaultPreset);
+  }, [path, defaultPreset]);
 
   const fileInputRef = useRef(null);
 
@@ -118,11 +152,11 @@ export default function ResizeImageInKb() {
 
   return (
     <ToolLayout
-      title="Resize Image in KB (Compress Photo to Exact Size)"
-      subtitle="Reduce and resize image file size to exact KB (20KB, 50KB, 100KB, 200KB) for USCIS, job applications, and official government portals. 100% free and in-browser safe."
+      title={pageTitle}
+      subtitle={pageSubtitle}
       category="Image Tools"
       categorySlug="image-tools"
-      currentToolId="resize-image-in-kb"
+      currentToolId={toolId}
       howToSteps={[
         { title: 'Upload Image', desc: 'Select any JPG, PNG or WEBP image from your device.' },
         { title: 'Select Target KB', desc: 'Click quick presets (20KB, 50KB, 100KB, 200KB) or type any custom KB size.' },
@@ -286,7 +320,7 @@ export default function ResizeImageInKb() {
             <div className="p-4 bg-white rounded-2xl border border-slate-200 text-center space-y-2">
               <span className="text-xs font-bold text-slate-400 uppercase">Original Image</span>
               <div className="h-44 flex items-center justify-center overflow-hidden rounded-xl bg-slate-50 p-2">
-                <img src={imageSrc} alt="Original" className="max-h-full max-w-full object-contain" />
+                <img src={imageSrc} alt="Original uploaded image preview" className="max-h-full max-w-full object-contain" />
               </div>
               <div className="text-sm font-bold text-slate-800">{originalSizeKb} KB</div>
             </div>
@@ -298,7 +332,7 @@ export default function ResizeImageInKb() {
               </span>
               <div className="h-44 flex items-center justify-center overflow-hidden rounded-xl bg-slate-50 p-2">
                 {compressedDataUrl && (
-                  <img src={compressedDataUrl} alt="Compressed" className="max-h-full max-w-full object-contain" />
+                  <img src={compressedDataUrl} alt="Compressed image preview output" className="max-h-full max-w-full object-contain" />
                 )}
               </div>
               <div className="text-sm font-black text-emerald-600">

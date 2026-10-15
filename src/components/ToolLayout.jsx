@@ -45,13 +45,6 @@ export default function ToolLayout({
         '@type': 'Offer',
         'price': '0',
         'priceCurrency': 'USD'
-      },
-      'aggregateRating': {
-        '@type': 'AggregateRating',
-        'ratingValue': '4.9',
-        'reviewCount': '1420',
-        'bestRating': '5',
-        'worstRating': '1'
       }
     },
     {

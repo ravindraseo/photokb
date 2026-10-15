@@ -210,7 +210,7 @@ export default function CompressImage() {
               {compressedUrl && (
                 <img
                   src={compressedUrl}
-                  alt="Compressed result"
+                  alt="Compressed image result preview"
                   className="max-h-[460px] object-contain rounded-lg shadow-sm"
                 />
               )}

@@ -109,8 +109,11 @@ export default function App() {
             <Route path="/us-visa-photo-tool" element={<UsPassportPhotoResizer />} />
             <Route path="/2x2-photo-maker" element={<UsPassportPhotoResizer />} />
             <Route path="/resize-image-in-kb" element={<ResizeImageInKb />} />
+            <Route path="/compress-image-to-50kb" element={<ResizeImageInKb />} />
             <Route path="/compress-image-to-100kb" element={<ResizeImageInKb />} />
             <Route path="/image-compress-to-100kb" element={<ResizeImageInKb />} />
+            <Route path="/compress-image-to-200kb" element={<ResizeImageInKb />} />
+            <Route path="/compress-image-to-500kb" element={<ResizeImageInKb />} />
             <Route path="/image-compressor" element={<CompressImage />} />
             <Route path="/jpg-compressor" element={<CompressImage />} />
             <Route path="/png-compressor" element={<CompressImage />} />

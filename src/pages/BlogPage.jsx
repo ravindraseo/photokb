@@ -65,6 +65,8 @@ export default function BlogPage() {
                   <img
                     src={post.featuredImage}
                     alt={post.imageAlt || post.title}
+                    width="600"
+                    height="338"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                   />

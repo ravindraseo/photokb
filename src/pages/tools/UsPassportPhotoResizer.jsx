@@ -226,7 +226,9 @@ export default function UsPassportPhotoResizer() {
                 {resizedDataUrl && (
                   <img
                     src={resizedDataUrl}
-                    alt="US Passport 2x2 Preview"
+                    alt="US Passport 2x2 Photo 600x600 preview"
+                    width="600"
+                    height="600"
                     className="w-full h-full object-cover"
                   />
                 )}

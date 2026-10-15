@@ -63,11 +63,35 @@
   </url>
 
   <url>
+    <loc>https://www.photokb.net/compress-image-to-50kb</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/compress-image-to-50kb" />
+  </url>
+
+  <url>
     <loc>https://www.photokb.net/compress-image-to-100kb</loc>
     <lastmod>2026-10-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
     <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/compress-image-to-100kb" />
+  </url>
+
+  <url>
+    <loc>https://www.photokb.net/compress-image-to-200kb</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/compress-image-to-200kb" />
+  </url>
+
+  <url>
+    <loc>https://www.photokb.net/compress-image-to-500kb</loc>
+    <lastmod>2026-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.photokb.net/compress-image-to-500kb" />
   </url>
 
   <url>

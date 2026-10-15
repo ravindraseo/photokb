@@ -152,8 +152,11 @@ export default function BlogPostPage() {
               <img
                 src={post.featuredImage}
                 alt={post.imageAlt || post.title}
+                width="1200"
+                height="675"
                 className="w-full h-auto aspect-video object-cover"
                 loading="eager"
+                fetchPriority="high"
               />
             </div>
           )}

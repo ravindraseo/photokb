@@ -223,7 +223,7 @@ export default function JpgToPdf() {
                     className="relative bg-white rounded-xl border border-slate-200 p-2 shadow-xs group hover:border-amber-400 transition-all flex flex-col justify-between"
                   >
                     <div className="relative aspect-3/4 rounded-lg overflow-hidden bg-slate-100 mb-2">
-                      <img src={img.dataUrl} alt={img.name} className="w-full h-full object-cover" />
+                      <img src={img.dataUrl} alt={img.name ? `Document page preview: ${img.name}` : `Document page ${idx + 1} preview`} className="w-full h-full object-cover" />
                       <div className="absolute top-1 left-1 bg-slate-900/70 text-white text-[10px] font-bold px-1.5 py-0.5 rounded">
                         #{idx + 1}
                       </div>

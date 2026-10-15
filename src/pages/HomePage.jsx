@@ -992,6 +992,8 @@ export default function HomePage({ onOpenSearch }) {
                   <img
                     src={post.featuredImage}
                     alt={post.imageAlt || post.title}
+                    width="400"
+                    height="225"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                   />

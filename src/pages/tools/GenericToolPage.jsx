@@ -204,7 +204,9 @@ export default function GenericToolPage() {
             <div className="p-8 bg-white border border-slate-200 rounded-2xl flex flex-col items-center justify-center shadow-xs">
               <img
                 src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(qrText)}`}
-                alt="Generated QR Code"
+                alt="Generated QR Code preview"
+                width="192"
+                height="192"
                 className="w-48 h-48 rounded-xl shadow-md border p-2 bg-white"
               />
               <span className="text-xs text-slate-400 mt-4">Scan with any smartphone camera</span>
